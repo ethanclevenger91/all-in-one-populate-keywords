@@ -20,3 +20,8 @@ By default, this plugin affects the post types 'Posts' and 'Pages' Use the `ai1_
           $types[] = 'my_post_type';
           return $types;
      }
+
+TODO:
+------------------
+
+-AJAX Save/Populate
