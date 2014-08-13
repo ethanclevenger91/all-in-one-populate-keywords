@@ -1,0 +1,29 @@
+.pop-key-input-wrap {
+	-webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    margin-bottom:.5em;
+}
+.pop-key-input-wrap.sliding-in {
+	opacity:0;
+	margin-left:200px;
+}
+.keyword-label {
+	margin-right:12px;
+}
+.keyword-input, .keyword-label {
+	display:inline-block;
+	vertical-align:middle;
+}
+.keywords-wrapper {
+	margin-top:2em;
+}
+.ai1-keywords-submit {
+	padding:1px 6px;
+	font-size:inherit;
+	line-height:inherit;
+}
+.bottom-button-wrap {
+	margin-top:1em;
+}
