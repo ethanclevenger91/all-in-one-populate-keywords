@@ -80,6 +80,9 @@ class Ai1_Keywords_Populate {
 		);
 		foreach($posts as $post) {
 			$num = rand(5, 9);
+			if(count($keys) < $num) {
+				$num = count($keys);
+			}
 			$use_these_keys = array_rand($keys, $num);
 			$use_this_array = array();
 			foreach($use_these_keys as $curr) {
