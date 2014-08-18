@@ -3,7 +3,7 @@
 Plugin Name: All in One SEO Populate Keywords
 Plugin URI: http://www.webspecdesign.com
 Description: Webspec Design
-Version: 1.1.1
+Version: 1.1.0
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
 */
@@ -62,7 +62,10 @@ class Ai1_Keywords_Populate {
 	}
 
 	function set_keys_option($keys) {
-		$option_val=implode('|', $keys);
+		$option_val='';
+		foreach($keys as $keyword) {
+			$option_val.=$keyword.'|';
+		}
 		update_option($this->getOptionKey(), $option_val);
 		$this->push_keywords($keys);
 	}
@@ -71,11 +74,12 @@ class Ai1_Keywords_Populate {
 		$posts = get_posts(array(
 			'posts_per_page'=>-1,
 			'post_type'=>$this->getValidPostTypes(),
-			'meta_key'=>self::$exclude_meta_key,
-			'meta_value'=>1
 			)
 		);
 		foreach($posts as $post) {
+			if(get_post_meta(get_the_ID(), self::$exclude_meta_key, true) == 1) {
+				continue;
+			}
 			$num = rand(5, 9);
 			if(count($keys) < $num) {
 				$num = count($keys);
@@ -94,6 +98,7 @@ class Ai1_Keywords_Populate {
 
 	function new_post_add_keywords($post_id) {
 		$keys = explode('|', get_option($this->getOptionKey()));
+		array_pop($keys);
 		$num = rand(5, 9);
 		if(count($keys) < $num) {
 			$num = count($keys);
@@ -118,6 +123,7 @@ class Ai1_Keywords_Populate {
 			echo '<form method="post">';
 				echo '<div class="keywords-wrapper">';
 					$keys = explode('|', get_option($this->getOptionKey()));
+					array_pop($keys);
 					foreach($keys as $key) {
 						echo '<div class="pop-key-input-wrap">';
 							echo '<label class="keyword-label">Keyword:</label>';
