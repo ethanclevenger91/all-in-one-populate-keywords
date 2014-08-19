@@ -3,7 +3,7 @@
 Plugin Name: All in One SEO Populate Keywords
 Plugin URI: http://www.webspecdesign.com
 Description: Webspec Design
-Version: 1.1.0
+Version: 1.2.0
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
 */
@@ -90,7 +90,7 @@ class Ai1_Keywords_Populate {
 				foreach($use_these_keys as $curr) {
 					$use_this_array[] = $keys[$curr];
 				}
-				$keyword_string = implode(',', $use_this_array);
+				$keyword_string = implode(', ', $use_this_array);
 				update_post_meta($post->ID, self::$ai1_meta_keywords, $keyword_string);
 			}
 		}
@@ -109,7 +109,7 @@ class Ai1_Keywords_Populate {
 			foreach($use_these_keys as $curr) {
 				$use_this_array[] = $keys[$curr];
 			}
-			$keyword_string = implode(',', $use_this_array);
+			$keyword_string = implode(', ', $use_this_array);
 			$_POST['aiosp_keywords'] = $keyword_string; //alter the post variable - when the Ai1SEO save_post fires later, it'll grab this value
 		}
 	}
