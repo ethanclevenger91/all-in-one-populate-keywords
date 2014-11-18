@@ -24,5 +24,5 @@ By default, this plugin affects the post types 'Posts' and 'Pages' Use the `ai1_
 TODO:
 ------------------
 
--AJAX Save/Populate
--Save option for post types
+- AJAX Save/Populate
+- Save option for post types
