@@ -27,3 +27,9 @@
 .bottom-button-wrap {
 	margin-top:1em;
 }
+.button.button-primary, .button.button-secondary {
+	margin:0 4px;
+}
+#ai1_pop_keys_settings_table td {
+	padding:2px 9px;
+}
