@@ -25,3 +25,4 @@ TODO:
 ------------------
 
 -AJAX Save/Populate
+-Save option for post types
