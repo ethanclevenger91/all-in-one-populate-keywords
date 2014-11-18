@@ -64,6 +64,7 @@ class Ai1_Keywords_Populate {
 	}
 
 	//Filter for users to add custom post types to the posts that should be populated with meta keys
+	//DEPRECATED
 	function ai1_populate_keywords_filters() {
 		$this->setValidPostTypes(apply_filters('ai1_seo_populate_keywords_valid_post_types', $this->getValidPostTypes()));
 	}

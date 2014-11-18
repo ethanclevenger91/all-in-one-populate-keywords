@@ -11,9 +11,9 @@ Use
 Adding Custom Post Types
 ------------------
 
-By default, this plugin affects the post types 'Posts' and 'Pages' Use the `ai1_seo_populate_keywords_valid_post_types` filter to add fields, like so:
+By default, this plugin affects the post types 'Posts' and 'Pages' __Deprecated__: Use the `ai1_seo_populate_keywords_valid_post_types` filter to add fields, like so:
 
-
+	//DEPRECATED
      add_filter('ai1_seo_populate_keywords_valid_post_types', 'my_types_function');
 
      function my_fields_function($types) {
