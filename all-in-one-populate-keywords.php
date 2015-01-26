@@ -3,7 +3,7 @@
 Plugin Name: All in One SEO Populate Keywords
 Plugin URI: http://www.webspecdesign.com
 Description: Webspec Design
-Version: 1.3.0
+Version: 1.4.0
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
 */
@@ -77,7 +77,7 @@ class Ai1_Keywords_Populate {
 	}
 
 	function register_menu_page() {
-		add_submenu_page('tools.php', 'All-in-One SEO Populate Keywords', 'Populate Keywords', 'activate_plugins', 'ai1_populate_keywords', array($this, 'menu_page_html'));
+		add_submenu_page('tools.php', 'All-in-One SEO Populate Keywords', 'Populate Keywords', self::$ai1_keys_cap, 'ai1_populate_keywords', array($this, 'menu_page_html'));
 	}
 
 	function set_keys_option($keys) {
