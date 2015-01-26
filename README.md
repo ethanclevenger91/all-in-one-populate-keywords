@@ -1,10 +1,10 @@
-All in One SEO Populate Keywords - by Webspec Design (v1.3.0)
+All in One SEO Populate Keywords - by Webspec Design (v1.4.0)
 ==================
 
-__New in v1.4:__ Capability added to view keywords page and exclude metabox. By default, this is only available to admin users. Use the following to show it to other roles:
+__New in v1.4.0:__ Capability added to view keywords page and exclude metabox. By default, this is only available to admin users. Use the following to show it to other roles:
 
 ```$role = get_role('editor');
-$role->add_cap('can_populate"keys');```
+$role->add_cap('can_populate_keys');```
 
 Use
 ------------------
