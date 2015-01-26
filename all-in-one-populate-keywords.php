@@ -14,6 +14,7 @@ class Ai1_Keywords_Populate {
 	private static $valid_post_types = array('post', 'page');
 	private static $post_types_option_key = 'ai1_seo_populate_valid_post_types';
 	private static $ai1_meta_keywords = '_aioseop_keywords';
+	private static $ai1_keys_cap = 'can_populate_keys';
 	function __construct() {
 		if(is_admin()) {
 			add_action('admin_menu', array($this, 'register_menu_page'));
@@ -24,9 +25,15 @@ class Ai1_Keywords_Populate {
 			add_action('add_meta_boxes', array($this, 'custom_meta_boxes'));
 			add_action('save_post', array($this, 'save_post'));
 			add_action('admin_init', array($this, 'ai1_seo_populate_keys_settings'));
+			add_action('admin_init', array($this, 'assign_capabilities'));
 		} else {
 			//no actions to register on front end. improve performance hopefully
 		}
+	}
+
+	function assign_capabilities() {
+		$role = get_role('administrator');
+		$role->add_cap(self::$ai1_keys_cap);
 	}
 
 	function check_for_ai1_seo() {
@@ -168,10 +175,12 @@ class Ai1_Keywords_Populate {
 	}
 	
 	function custom_meta_boxes() {
-		foreach($this->getValidPostTypes() as $type) {	
-			add_meta_box(
-				'ai1_seo_populate_keys_exclude', 'All-in-One SEO Populate Keywords', array($this, 'details_meta_content'), $type, 'side', 'low'
-				);
+		if(current_user_can(self::$ai1_keys_cap)) {
+			foreach($this->getValidPostTypes() as $type) {	
+				add_meta_box(
+					'ai1_seo_populate_keys_exclude', 'All-in-One SEO Populate Keywords', array($this, 'details_meta_content'), $type, 'side', 'low'
+					);
+			}
 		}
 	}
 
