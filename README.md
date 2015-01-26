@@ -1,6 +1,11 @@
 All in One SEO Populate Keywords - by Webspec Design (v1.3.0)
 ==================
 
+__New in v1.4:__ Capability added to view keywords page and exclude metabox. By default, this is only available to admin users. Use the following to show it to other roles:
+
+```$role = get_role('editor');
+$role->add_cap('can_populate"keys');```
+
 Use
 ------------------
 
@@ -22,6 +27,7 @@ By default, this plugin affects the post types 'Posts' and 'Pages' __Deprecated_
      }
 
 __New in v1.3.0:__ Under Settings > Writing, you can use checkboxes to pick valid custom post types. If this has never been saved, it will have checked posts, pages, and any post types you added via the above filter in versions < 1.3.0. Upon saving, those values will be saved to the database. When determining valid post types, the plugin will merge the database values and the filter values.
+
 
 TODO:
 ------------------
