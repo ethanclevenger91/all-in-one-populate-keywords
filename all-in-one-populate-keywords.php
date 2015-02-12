@@ -3,7 +3,7 @@
 Plugin Name: All in One SEO Populate Keywords
 Plugin URI: http://www.webspecdesign.com
 Description: Webspec Design
-Version: 1.4.0
+Version: 1.4.1
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
 */

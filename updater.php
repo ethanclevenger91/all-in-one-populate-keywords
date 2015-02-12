@@ -230,6 +230,7 @@ class WP_GitHub_Updater {
 				$version = false;
 			else
 				$version = $matches[1];
+			var_dump($version);
 
 			// back compat for older readme version handling
 			// only done when there is no version found in file name
