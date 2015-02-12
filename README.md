@@ -1,5 +1,5 @@
-~Current Version:1.4.0~
-All in One SEO Populate Keywords - by Webspec Design (v1.4.0)
+~Current Version:1.4.1~
+All in One SEO Populate Keywords - by Webspec Design (v1.4.1)
 ==================
 
 __New in v1.4.0:__ Capability added to view keywords page and exclude metabox. By default, this is only available to admin users. Use the following to show it to other roles:
