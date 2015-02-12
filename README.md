@@ -1,3 +1,4 @@
+~Current Version:1.4.0~
 All in One SEO Populate Keywords - by Webspec Design (v1.4.0)
 ==================
 
