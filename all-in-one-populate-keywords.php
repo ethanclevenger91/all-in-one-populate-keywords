@@ -3,7 +3,7 @@
 Plugin Name: All in One SEO Populate Keywords
 Plugin URI: http://www.webspecdesign.com
 Description: Webspec Design
-Version: 1.4.1
+Version: 1.5.0
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
 */
@@ -40,7 +40,13 @@ class Ai1_Keywords_Populate {
 	}
 
 	function check_for_ai1_seo() {
-		if(!is_plugin_active('all-in-one-seo-pack/all_in_one_seo_pack.php')) {
+		if(
+			!
+			(
+				   is_plugin_active('all-in-one-seo-pack/all_in_one_seo_pack.php')
+				|| is_plugin_active('all-in-one-seo-pack-pro/all_in_one_seo_pack.php')
+			)
+		) {
 			add_action('admin_notices', array($this, 'please_activate_ai1_base'));
 		}
 	}
