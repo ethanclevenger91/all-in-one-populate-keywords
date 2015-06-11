@@ -6,6 +6,7 @@ Description: Webspec Design
 Version: 1.5.0
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
+Bitbucket Plugin URI: https://meriwetherlewis@bitbucket.org/webspec/all-in-one-seo-populate-keywords.git
 */
 
 include_once('updater.php');
