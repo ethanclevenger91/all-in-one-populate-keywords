@@ -6,7 +6,7 @@ Description: Webspec Design
 Version: 1.5.1
 Author: Webspec Design
 Author URI: http://www.webspecdesign.com
-Bitbucket Plugin URI: https://bitbucket.org/webspec/webspec-design-wordpress-core
+Bitbucket Plugin URI: https://bitbucket.org/webspec/all-in-one-seo-populate-keywords
 */
 
 include_once('updater.php');
